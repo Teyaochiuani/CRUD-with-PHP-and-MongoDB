@@ -1,8 +1,9 @@
 <?php
-    require_once "./clases/Conexion-php";
+    require_once "./clases/Conexion.php";
     require_once "./clases/Crud.php";
     $crud = new Crud();
     $datos = $crud->mostrarDatos();
+    print_r($datos);
 ?>
 
 <?php include "./header.php"; ?>
@@ -28,7 +29,7 @@
                     </thead>
                     <tbody>
                     <?php
-                        foreach($datos as $item){
+			    		foreach ($datos as $item) {
                     ?>
                         <tr>
                             <td> <?php $item->paterno; ?> </td>

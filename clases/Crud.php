@@ -6,8 +6,8 @@
                 $coleccion = $conexion->personas;
                 $datos = $coleccion->find();
                 return $datos;
-            } catch (\Trowable $th) {
-                throw $th->getMessage;
+            } catch (\Throwable $th) {
+                return $th->getMessage();
             }
         }
     }
